@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'rest-client'
+
+url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
+response = RestClient.get(url)
+data = JSON.parse(response)
+
+10.times do |i|
+  Ingredient.create(name: data["drinks"][i]["strIngredient1"])
+end
+
