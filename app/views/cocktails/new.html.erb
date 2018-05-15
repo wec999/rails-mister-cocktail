@@ -1,9 +1,12 @@
+<div class="content">
 <h1>New Cocktail</h1>
 
 <%= simple_form_for (@cocktail) do |f| %>
   <%= f.input :name %>
+  <%= f.input :description %>
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
   <%#= f.association :ingredients %>
   <%= f.submit "Add new cocktail", class: "btn btn-primary" %>
 <% end %>
+</div>

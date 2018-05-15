@@ -1,0 +1,31 @@
+  <div class="navbar-wagon navbar-fixed-top" >
+    <a href="/cocktails" class="navbar-wagon-brand">
+      <%= image_tag "https://images-na.ssl-images-amazon.com/images/I/51agWCTC5GL._SY355_.jpg", alt: "Donde está la hpta imagen", width: 50, height: 200, class: "avatar"%>
+    </a>
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <!-- <a href="/cocktails/new" class="navbar-wagon-item navbar-wagon-link">Add new Cocktail</a> -->
+      <!-- Profile picture with dropdown list -->
+      <div class="navbar-wagon-item">
+        <div class="dropdown">
+          <img src="http://store.jackdaniels.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/j/a/jack-daniels-tennessee-honey_1.jpg" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li><a href="/cocktails/new">Add new Cocktail</a></li>
+            <!-- <li><a href="#">Dashboard</a></li> -->
+            <!-- <li><a href="#">Log Out</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown appearing on mobile only -->
+    <div class="navbar-wagon-item hidden-md hidden-lg">
+      <div class="dropdown">
+        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="#">Host</a></li>
+          <li><a href="#">Trips</a></li>
+          <li><a href="#">Messagese</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
