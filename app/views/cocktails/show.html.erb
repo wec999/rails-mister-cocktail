@@ -1,16 +1,14 @@
+
 <h1>Cocktails <%= @cocktail.name %></h1>
-
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 <% @doses.each do |dose|  %>
-  <ul>
-    <li>
-        <%= dose.description %>
-        <%= dose.ingredient.name %>
-
-        <%= link_to "Eliminar", cocktail_dose_path(@cocktail, dose), method: :delete, data: {confirm: "seguro socio?"} %>
-
-        <i class="fas fa-trash-alt"></i>
-    </li>
-  </ul>
-  <% end %>
-
+<ul>
+  <li>
+    <%= dose.description %>
+    <%= dose.ingredient.name %>
+    <%= link_to "Eliminar", cocktail_dose_path(@cocktail, dose), method: :delete, data: {confirm: "seguro socio?"} %>
+    <i class="fas fa-trash-alt"></i>
+  </li>
+</ul>
+<% end %>
 <%=link_to "Show All Cocktails", cocktails_path  %>
